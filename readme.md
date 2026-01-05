@@ -1,80 +1,67 @@
 # Projet JavaScript – Interaction DOM
 
-Ce projet est un exemple simple d’interaction entre **HTML**, **CSS** et **JavaScript**.  
+Ce projet est un exemple moderne d'interaction entre **HTML5**, **CSS3** et **JavaScript ES2024**.  
 Il permet :
-- d’afficher un texte différent selon le bouton cliqué
-- d’inverser l’ordre des mots saisis par l’utilisateur
+- d'afficher un texte différent selon le bouton cliqué
+- d'inverser l'ordre des mots saisis par l'utilisateur
 - de comprendre les bases des événements, fonctions et manipulations du DOM
 
 ---
 
 ## Structure du projet
 
-
-├── index.html # Structure de la page
-
-├── style.css # Mise en forme (CSS)
-
-├── func.js # Logique JavaScript
-
-├── download.png # Image affichée dans la page
-
-└── README.md
+```
+.
+├── index.html      # Structure de la page (HTML5 sémantique)
+├── style.css       # Mise en forme (CSS3 moderne)
+├── func.js         # Logique JavaScript (ES2024)
+├── download.png    # Image affichée dans la page
+└── README.md       # Documentation
+```
 
 ---
 
 ## Fonctionnalités
 
 ### 1. Boutons interactifs
-Trois boutons permettent d’afficher un texte spécifique dans la page.
 
-- Bouton 1 → “Texte pour le bouton 1”
-- Bouton 2 → “Texte pour le bouton 2”
-- Bouton 3 → “Texte pour le bouton 3”
+Trois boutons permettent d'afficher un texte spécifique dans la page :
 
-Le texte est affiché dynamiquement dans l’élément `<p id="output">`.
+- **Bouton 1** → "Texte pour le bouton 1"
+- **Bouton 2** → "Texte pour le bouton 2"
+- **Bouton 3** → "Texte pour le bouton 3"
 
----
+Le texte s'affiche dynamiquement dans l'élément `<p id="output">`.
 
 ### 2. Inversion de mots
-L’utilisateur peut :
+
+L'utilisateur peut :
 1. Saisir du texte dans un champ `<input>`
-2. Cliquer sur **Inverser les mots**
+2. Cliquer sur le bouton **Inverser les mots**
 3. Voir le texte inversé mot par mot
 
-Exemple :
-
-
-bonjour le monde
-→ monde le bonjour
+**Exemple :**
+```
+bonjour le monde → monde le bonjour
+```
 
 ---
 
 ## Technologies utilisées
 
-- **HTML5** : structure de la page
-- **CSS3** : mise en forme et style
-- **JavaScript (ES2020)** :
-  - fonctions
-  - événements (`addEventListener`)
-  - manipulation du DOM
-  - fonctions fléchées (`=>`)
-  - chaînage optionnel (`?.`)
+- **HTML5** : structure sémantique avec `<main>`, `<section>`, `<article>`
+- **CSS3** : flexbox, grid, variables CSS, media queries
+- **JavaScript ES2024** : fonctions fléchées, optional chaining (`?.`), nullish coalescing (`??`), destructuration, async/await
 
-Aucune librairie externe n’est utilisée.
+Aucune librairie externe n'est utilisée.
 
 ---
 
-## Points techniques importants
+## Concepts clés
 
-### DOMContentLoaded
-Le code JavaScript attend que le HTML soit entièrement chargé avant de s’exécuter, afin d’éviter les erreurs liées aux éléments inexistants.
-
-### Fonctions fléchées (`=>`)
-Utilisées pour :
-- une syntaxe plus concise
-- éviter les problèmes liés à `this`
-
-### Optional chaining (`?.`)
-Permet d’ajouter des écouteurs d’événements sans provoquer d’erreur si un élément HTML est absent.
+- **DOMContentLoaded** : attend le chargement complet du HTML avant l'exécution du code
+- **Event delegation** : gestion efficace des événements
+- **Fonctions fléchées** (`=>`): syntaxe concise et gestion du contexte `this`
+- **Optional chaining** (`?.`) : accès sécurisé aux propriétés
+- **Nullish coalescing** (`??`) : gestion des valeurs null/undefined
 

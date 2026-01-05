@@ -1,73 +1,322 @@
-/* Reset minimal */
+/* Reset et styles de base */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Page */
 body {
-    min-height: 100vh;
-    background-color: #f4f6f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 40px;
-    color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Paragraphes */
+/* Conteneur principal en deux colonnes */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Colonnes */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section de contenu */
+.section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* En-tête des sections */
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Styles pour les paragraphes */
 p {
-    font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
 }
 
-/* Boutons */
+#output, #output2 {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  border-left: 5px solid #3498db;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles pour les boutons */
 button {
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 button:hover {
-    background-color: #1e4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-    transform: scale(0.97);
+  transform: translateY(1px);
 }
 
-/* Zone texte affichée */
-#output {
-    min-height: 24px;
-    font-weight: 600;
-    color: #111827;
+#button1 {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
 }
 
-/* Input */
-input[type="text"] {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #cbd5e1;
-    font-size: 0.95rem;
-    width: 220px;
+#button2 {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
 }
 
-input[type="text"]:focus {
-    outline: none;
-    border-color: #2563eb;
+#button3 {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: white;
 }
 
-/* Image */
+#reverseButton {
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  color: white;
+}
+
+#triMots {
+  background: linear-gradient(to right, #1abc9c, #16a085);
+  color: white;
+}
+
+#triLeven {
+  background: linear-gradient(to right, #f39c12, #e67e22);
+  color: white;
+}
+
+#reverseButtonButton {
+  background: linear-gradient(to right, #34495e, #2c3e50);
+  color: white;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles pour les inputs */
+input {
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+input::placeholder {
+  color: #a0a0a0;
+}
+
+/* Groupe de boutons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  margin-top: 0;
+}
+
+/* Style pour l'image */
 img {
-    margin-top: 20px;
-    max-width: 200px;
-    height: auto;
-    border-radius: 8px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  margin-top: 2rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 500px;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête de page */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  grid-column: 1 / -1;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation pour les résultats */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#output, #output2 {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Effet de brillance sur les boutons */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+button:hover::after {
+  opacity: 1;
+  transform: rotate(30deg) translate(20%, 20%);
+}
+
+/* Styles pour les étiquettes */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.input-with-label {
+  margin-bottom: 1.5rem;
 }
